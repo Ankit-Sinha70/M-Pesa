@@ -5,7 +5,7 @@ import Logo from "../assets/Svg/logo";
 
 const SourcingAgentDashboard = () => {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gradient-to-br from-purple-400 via-pink-300 to-white ">
       {/* Header */}
       <header className="bg-white shadow-md p-4 flex items-center justify-between">
         <div className="flex items-center space-x-3">

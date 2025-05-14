@@ -45,18 +45,17 @@ const BrokerDashboard = () => {
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="flex justify-between"
+          className=""
         >
-         <div className="flex items-center space-x-3">
-          <Logo/>
-         <h1 className="text-2xl font-bold text-purple-800">
-            Broker Dashboard
-          </h1>
-          
-         </div>
-          <div>
-          <LogoutButton/>
-          </div>
+         <header className="bg-white shadow px-6 py-4 flex items-center justify-between sticky top-0 z-10">
+        <div className="flex items-center space-x-3">
+            <Logo/>
+          <h1 className="text-xl font-bold text-purple-800">Broker Dashboard</h1>
+        </div>
+        <div className="flex items-center space-x-4">
+          <LogoutButton />
+        </div>
+      </header>
         </motion.div>
 
         <motion.div
@@ -100,7 +99,7 @@ const BrokerDashboard = () => {
               {orders.map((order) => (
                 <motion.div
                   key={order.id}
-                  className="bg-white p-5 rounded-xl shadow-lg border border-purple-100 hover:shadow-xl transition"
+                  className="bg-white p-5 rounded-xl shadow-lg border border-purple-200 hover:shadow-xl transition"
                   variants={{
                     hidden: { opacity: 0, y: 20 },
                     visible: { opacity: 1, y: 0 },

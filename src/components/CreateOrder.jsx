@@ -39,7 +39,7 @@ const CreateOrder = () => {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-100 to-indigo-100 p-4"
+      className="flex items-center justify-center bg-gradient-to-r from-blue-100 to-indigo-100 p-4 mt-5"
     >
       <ToastContainer position="top-right" autoClose={3000} />
       <form

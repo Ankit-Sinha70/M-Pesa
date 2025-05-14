@@ -106,7 +106,7 @@ const AdminDashboard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gradient-to-br from-purple-300 via-pink-300 to-white ">
       {/* Confirmation Dialog */}
       {showConfirmDialog && (
         <div className="fixed inset-0 bg-transparent backdrop-blur-md flex justify-center items-center z-50">
@@ -185,7 +185,7 @@ const AdminDashboard = () => {
             {users?.map((user) => (
               <div
                 key={user.id}
-                className="bg-white rounded-lg shadow p-5 border border-gray-200"
+                className="bg-gray-200 rounded-lg shadow p-5 border border-gray-200"
               >
                 <p className="font-medium text-gray-700">
                   <strong>Email:</strong> {user.email}
@@ -229,7 +229,7 @@ const AdminDashboard = () => {
         {/* Bid Management */}
         <section>
           <h2 className="text-2xl font-semibold mb-4">📋 Bid Management</h2>
-          <div className="bg-white rounded-lg shadow p-4">
+          <div className="bg-gray-200 rounded-lg shadow p-4">
             <BidManagement orders={orders} />
           </div>
         </section>
@@ -237,7 +237,7 @@ const AdminDashboard = () => {
         {/* Revenue Summary */}
         <section>
           <h2 className="text-2xl font-semibold mb-4">💰 Revenue Summary</h2>
-          <div className="bg-white rounded-lg shadow p-4">
+          <div className="bg-gray-200 rounded-lg shadow p-4">
             <RevenueSummary orders={orders} />
           </div>
         </section>

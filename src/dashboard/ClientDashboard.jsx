@@ -8,7 +8,6 @@ import {
   addDoc,
   Timestamp,
 } from "firebase/firestore";
-import { useAuth } from "../contexts/AuthContext";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import LogoutButton from "../components/LogoutButton";
@@ -18,7 +17,6 @@ const ClientDashboard = () => {
   const [orders, setOrders] = useState([]);
   console.log('orders', orders)
   const [processingId, setProcessingId] = useState(null);
-  const { currentUser } = useAuth();
 
   useEffect(() => {
     const unsubscribe = onSnapshot(collection(db, "orders"), (snapshot) => {
@@ -68,18 +66,15 @@ const ClientDashboard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gradient-to-br from-purple-300 via-pink-300 to-white ">
       <ToastContainer />
       {/* Header */}
-      <header className="bg-white shadow px-6 py-4 flex items-center justify-between sticky top-0 z-10">
+      <header className="bg-white shadow-lg px-6 py-4 flex items-center justify-between sticky top-0 z-10">
         <div className="flex items-center space-x-3">
           <Logo/>
           <h1 className="text-xl font-bold text-purple-800">Client Dashboard</h1>
         </div>
         <div className="flex items-center space-x-4">
-          <span className="text-gray-600 text-sm hidden sm:block">
-            {currentUser?.email}
-          </span>
          <LogoutButton/>
         </div>
       </header>
@@ -107,7 +102,7 @@ const ClientDashboard = () => {
                 </p>
                 <p className="text-gray-700 mb-1">
                   <strong>Status:</strong>{" "}
-                  <span className="capitalize text-blue-600">
+                  <span className="capitalize text-blue-600 bg-green-300 p-1.5 rounded-lg text-sm-600 font-medium">
                     {order.status}
                   </span>
                 </p>
@@ -132,6 +127,9 @@ const ClientDashboard = () => {
           </div>
         )}
       </main>
+
+
+      
     </div>
   );
 };

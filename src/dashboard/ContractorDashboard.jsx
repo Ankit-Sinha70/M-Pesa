@@ -93,9 +93,9 @@ const ContractorDashboard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-white p-4 sm:p-8">
+    <div className="min-h-screen bg-gradient-to-br from-purple-300 via-pink-300 to-white p-4 sm:p-8">
       {/* Header */}
-      <div className="flex justify-between items-center mb-8">
+      <div className="flex justify-between items-center mb-8 bg-white p-4">
         <div className="flex items-center space-x-3">
           <Logo/>
           <h1 className="text-2xl sm:text-2xl font-bold text-purple-800">
