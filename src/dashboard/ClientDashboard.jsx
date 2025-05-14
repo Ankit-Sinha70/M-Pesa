@@ -12,6 +12,7 @@ import { useAuth } from "../contexts/AuthContext";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import LogoutButton from "../components/LogoutButton";
+import Logo from "../assets/Svg/logo";
 
 const ClientDashboard = () => {
   const [orders, setOrders] = useState([]);
@@ -72,8 +73,8 @@ const ClientDashboard = () => {
       {/* Header */}
       <header className="bg-white shadow px-6 py-4 flex items-center justify-between sticky top-0 z-10">
         <div className="flex items-center space-x-3">
-          <img src="/logo.png" alt="Logo" className="h-10" />
-          <h1 className="text-xl font-bold text-gray-800">Client Dashboard</h1>
+          <Logo/>
+          <h1 className="text-xl font-bold text-purple-800">Client Dashboard</h1>
         </div>
         <div className="flex items-center space-x-4">
           <span className="text-gray-600 text-sm hidden sm:block">

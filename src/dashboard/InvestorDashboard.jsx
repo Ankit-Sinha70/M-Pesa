@@ -1,6 +1,7 @@
 import React from "react";
 import ApprovedOrdersList from "../components/ApprovedOrdersList";
 import LogoutButton from "../components/LogoutButton";
+import Logo from "../assets/Svg/logo";
 
 const InvestorDashboard = () => {
   return (
@@ -8,12 +9,8 @@ const InvestorDashboard = () => {
       {/* Header */}
       <header className="bg-white shadow-md p-4 flex items-center justify-between">
         <div className="flex items-center space-x-3">
-          <img
-            src="/logo.svg" // Replace with your actual logo path
-            alt="Logo"
-            className="h-8 w-8"
-          />
-          <h1 className="text-xl font-bold text-gray-800">
+          <Logo />
+          <h1 className="text-xl font-bold text-purple-800">
             Investor Dashboard
           </h1>
         </div>

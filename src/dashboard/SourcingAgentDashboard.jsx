@@ -1,7 +1,7 @@
 import React from "react";
 import FundedOrdersList from "../components/FundedOrdersList";
-import Logo from "../assets/m-pesa-logo.png";
 import LogoutButton from "../components/LogoutButton";
+import Logo from "../assets/Svg/logo";
 
 const SourcingAgentDashboard = () => {
   return (
@@ -9,8 +9,8 @@ const SourcingAgentDashboard = () => {
       {/* Header */}
       <header className="bg-white shadow-md p-4 flex items-center justify-between">
         <div className="flex items-center space-x-3">
-          <img src={Logo} alt="Logo" className="h-10 w-16" />
-          <h1 className="text-xl font-bold text-gray-800">
+          <Logo/>
+          <h1 className="text-xl font-bold text-purple-800">
             Sourcing Agent Dashboard
           </h1>
         </div>

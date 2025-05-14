@@ -13,6 +13,7 @@ import RevenueSummary from "../components/RevenueSummary";
 import LogoutButton from "../components/LogoutButton";
 import { getIdTokenResult } from "firebase/auth";
 import { toast } from "react-toastify";
+import Logo from "../assets/Svg/logo";
 
 const AdminDashboard = () => {
   const [orders, setOrders] = useState([]);
@@ -167,8 +168,8 @@ const AdminDashboard = () => {
       {/* Header */}
       <header className="bg-white shadow px-6 py-4 flex items-center justify-between sticky top-0 z-10">
         <div className="flex items-center space-x-3">
-          <img src="/logo.png" alt="Maisha Pesa" className="h-10" />
-          <h1 className="text-xl font-bold text-gray-800">Admin Dashboard</h1>
+            <Logo/>
+          <h1 className="text-xl font-bold text-purple-800">Admin Dashboard</h1>
         </div>
         <div className="flex items-center space-x-4">
           <LogoutButton />
@@ -215,7 +216,7 @@ const AdminDashboard = () => {
                   {/* Delete User (always visible) */}
                   <button
                     onClick={() => handleDeleteClick(user.id)}
-                    className="w-1/2 m-auto bg-red-600 text-white py-2 rounded hover:bg-red-700"
+                    className="w-full m-auto bg-red-600 text-white py-2 rounded hover:bg-red-700"
                   >
                     Delete User
                   </button>

@@ -6,6 +6,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
 import { motion } from "framer-motion";
 import LogoutButton from "../components/LogoutButton";
+import Logo from "../assets/Svg/logo";
 
 const BrokerDashboard = () => {
   const [orders, setOrders] = useState([]);
@@ -46,13 +47,12 @@ const BrokerDashboard = () => {
           transition={{ delay: 0.2, duration: 0.6 }}
           className="flex justify-between"
         >
-         <div>
-         <h1 className="text-4xl font-bold text-purple-800">
+         <div className="flex items-center space-x-3">
+          <Logo/>
+         <h1 className="text-2xl font-bold text-purple-800">
             Broker Dashboard
           </h1>
-          <p className="mt-2 text-gray-700 text-lg">
-            Create new orders and assign contractors here.
-          </p>
+          
          </div>
           <div>
           <LogoutButton/>
@@ -65,6 +65,9 @@ const BrokerDashboard = () => {
           transition={{ delay: 0.4, duration: 0.6 }}
           className="mt-10"
         >
+          <p className="mt-2 text-gray-700 text-lg">
+            Create new orders and assign contractors here.
+          </p>
           <CreateOrder />
         </motion.div>
 
